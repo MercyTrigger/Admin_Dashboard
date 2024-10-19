@@ -2,9 +2,10 @@
     --font-main: "Agdasima", sans-serif;
     --box-shadow: -7px 4px 8px -2px rgba(34, 60, 80, 0.2);
     --font-size: 1.3rem;
-    --main-section-color: #1c1c1c;
+    --main-section-color: #10162f;
     --aside-section-color: #f8eeed;
     --blocks-background-color: #ffe1cc;
+    --white-color-text: #ffffff;
     --inset-focus-input: 0px 0px 7px 0px rgba(34, 60, 80, 1) inset;
 }
 
@@ -113,23 +114,19 @@ input[type="search"] {
     width: 80%;
     height: 1.5rem;
     border-radius: 999px;
-    padding: .5rem;
+    padding: .5rem .5rem .5rem 1.5rem;
     border: none;
     font-size: calc((var(--font-size)) - 0.3rem);
-    background-color: var(--blocks-background-color);
+    background: var(--blocks-background-color) url("./assets/search-loupe.svg") right / 25px 30px no-repeat;
+    background-origin: content-box;
 }
 
-input[type="search"]::after {
-    background-image: url("./assets/search-loupe.svg");
-    background-size: 30px 40px;
-    position: relative;
-    /* top: 30px; */
-    background-repeat: no-repeat;
+input[type="search" i]::-webkit-search-cancel-button {
+    display: none;
 }
-
 
 input[type="search"]:focus {
-    padding: .5rem;
+    padding: .5rem .5rem .5rem 1.5rem;
     outline: none;
     border: none;
 } 
@@ -137,4 +134,9 @@ input[type="search"]:focus {
 input[type="search"]::placeholder {
     font-size: calc((var(--font-size)) - 0.3rem);
 } 
+
+.profle-info {
+    align-self: center;
+    color: var(--white-color-text);
+}
 
